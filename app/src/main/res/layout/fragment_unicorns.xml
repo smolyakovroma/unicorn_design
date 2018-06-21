@@ -1,0 +1,65 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frame_unicorn"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="56dp"
+    android:layout_marginTop="56dp"
+    tools:context="io.unicorngo.activity.fragment.UnicornsFragment">
+
+    <TextView
+
+        android:id="@+id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:text="@string/empty_list"
+        android:textAlignment="center"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text.18"
+        android:visibility="visible" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/llRV"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:visibility="visible">-->
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_unicorns"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scrollbars="vertical" />
+
+        <!--</LinearLayout>-->
+        <!--<LinearLayout-->
+        <!--android:id="@+id/llRVEmpty"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:visibility="visible">-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/empty"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:fontFamily="sans-serif-light"-->
+        <!--android:gravity="center"-->
+        <!--android:text="@string/empty_list"-->
+        <!--android:textColor="@color/gray"-->
+        <!--android:textSize="@dimen/text.18" />-->
+
+        <!--</LinearLayout>-->
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+</FrameLayout>

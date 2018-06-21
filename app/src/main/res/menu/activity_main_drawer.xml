@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_buy_gen0"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_buy_unicorn_gen0" />
+        <!--<item-->
+            <!--android:id="@+id/nav_buy_candy"-->
+            <!--android:icon="@drawable/ic_menu_gallery"-->
+            <!--android:title="@string/menu_unicorns_buy_candy" />-->
+        <item
+            android:id="@+id/nav_get_candy"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_buy_candy" />
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/menu_settings" />
+    </group>
+
+    <item android:title="@string/menu_wallet">
+        <menu>
+            <item
+                android:id="@+id/nav_transactions"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/transactions" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/title_send" />
+            <item
+                android:id="@+id/nav_recive"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/title_recive" />
+        </menu>
+    </item>
+
+</menu>

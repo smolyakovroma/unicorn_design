@@ -1,0 +1,59 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "android.test.web3j"
+        minSdkVersion 23
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        resConfigs "auto"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation group: 'com.android.support', name: 'exifinterface', version: '26.1.0'
+    implementation group: 'com.android.support', name: 'animated-vector-drawable', version: '26.1.0'
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support:support-vector-drawable:26.1.0'
+    implementation 'org.web3j:core:3.3.1-android'
+    implementation 'com.android.support:cardview-v7:26.1.0'
+    implementation 'com.android.support:support-v13:26.1.0'
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    implementation 'com.github.bumptech.glide:glide:4.0.0'
+    implementation 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
+    implementation group: 'com.madgag.spongycastle', name: 'core', version: '1.58.0.0'
+    //    compileOnly "org.projectlombok:lombok:1.16.20"
+    //    annotationProcessor 'org.projectlombok:lombok:1.16.20'
+    //Lollipin
+//    implementation 'com.android.support:multidex:1.0.0'
+    implementation 'org.florescu.android.rangeseekbar:rangeseekbar-library:0.3.0'
+//    implementation('com.github.omadahealth:lollipin:2.1.0@aar') {
+//        transitive = true
+//    }
+//    implementation group: 'org.apache.clerezza.scala', name: 'script-engine', version: '1.0.0'
+
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    compile 'io.reactivex:rxjava:1.2.5'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile group: 'com.jakewharton.rxbinding', name: 'rxbinding', version: '1.0.1'
+
+
+}
