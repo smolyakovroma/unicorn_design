@@ -7,33 +7,38 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
-    <!--<LinearLayout-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:orientation="vertical">-->
 
-    <!--<android.support.v7.widget.RecyclerView-->
-    <!--android:id="@+id/rv_unicorns"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:scrollbars="vertical"-->
-    <!--android:layout_marginBottom="70dp"/>-->
 
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!--<android.support.v4.widget.NestedScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
+
+        <!-- Your Scrollable contents should be here - such as,
+        ViewPager or etc -->
+
+
+        <!--</android.support.v4.widget.NestedScrollView>-->
+
+
         <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:theme="@style/AppTheme.AppBarOverlay">
+
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="?attr/colorPrimary"
-                app:popupTheme="@style/AppTheme.PopupOverlay">
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
 
                 <android.support.v7.widget.SearchView
@@ -43,32 +48,145 @@
                     android:layout_gravity="right"
                     android:theme="@style/ThemeOverlay.AppCompat.Dark" />
 
-                <!--<android.support.v7.widget.SearchView-->
-                <!--android:id="@+id/svSearch"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_gravity="right"-->
-                <!--android:theme="@style/ThemeOverlay.AppCompat.Dark"-->
-                <!--app:searchIcon="@drawable/magnify" />-->
             </android.support.v7.widget.Toolbar>
-            <!--<android.support.design.widget.TabLayout-->
-            <!--android:id="@+id/tab_layout"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="?attr/actionBarSize"-->
-            <!--app:tabIndicatorColor="@android:color/background_light"-->
-            <!--app:tabSelectedTextColor="@android:color/background_light"-->
-            <!--app:tabTextColor="@android:color/background_light" />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="#313174"
+                android:backgroundTint="#313174"
+                android:gravity="start"
+                android:orientation="horizontal"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/user_logo_stub" />
+
+                <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="0px"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:gravity="start">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="User Ivan"
+                            android:textColor="@color/white"
+                            android:textSize="8pt"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="0px"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <!--<ImageView-->
+                        <!--android:layout_width="20dp"-->
+                        <!--android:layout_height="20dp"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:layout_marginRight="10dp"-->
+                        <!--android:src="@mipmap/ether" />-->
+
+                        <!--<TextView-->
+                        <!--android:id="@+id/tvBalanceEth"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center_vertical"-->
+                        <!--android:text="0.00"-->
+                        <!--android:textSize="6pt" />-->
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="20dp"
+                            android:src="@mipmap/candy_rotate" />
+
+                        <TextView
+                            android:id="@+id/tvBalanceCandy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="0.00"
+                            android:textSize="6pt" />
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="20dp"
+                            android:src="@mipmap/mega_candy_rotate" />
+
+                        <TextView
+                            android:id="@+id/tvBalanceMegaCandy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="0.00"
+                            android:textSize="6pt" />
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="15dp"
+                            android:src="@mipmap/land_icon" />
+
+                        <TextView
+                            android:id="@+id/tvBalanceLand"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="0.00"
+                            android:textSize="6pt" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|end" >
+                    <ImageView
+                        android:layout_marginRight="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/downarrow" />
+                </LinearLayout>
+
+            </LinearLayout>
         </android.support.design.widget.AppBarLayout>
+
+
+        <!--<android.support.v4.widget.NestedScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
+
+
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        <!--<FrameLayout-->
+        <!--android:id="@+id/frame"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"></FrameLayout>-->
+        <!--</android.support.v4.widget.NestedScrollView>-->
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
-            <FrameLayout
-                android:id="@+id/frame"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"></FrameLayout>
 
             <android.support.design.widget.BottomNavigationView
                 android:id="@+id/navigation"
@@ -76,7 +194,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="0dp"
                 android:layout_marginStart="0dp"
-                android:background="?android:attr/windowBackground"
+                android:background="#60607c"
+                app:itemTextColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"

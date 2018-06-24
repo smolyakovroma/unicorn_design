@@ -3,17 +3,22 @@
 
     <item
         android:id="@+id/navigation_unicorns"
-        android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="@string/title_unicorns" />
-
-
-    <item
-        android:id="@+id/navigation_market"
-        android:icon="@drawable/ic_notifications_black_24dp"
+        android:icon="@drawable/ic_unicorn"
         android:title="@string/title_market" />
+
 
     <item
         android:id="@+id/navigation_land"
-        android:icon="@drawable/ic_home_black_24dp"
+        android:icon="@drawable/ic_land"
         android:title="@string/title_land" />
+
+    <item
+        android:id="@+id/navigation_tour"
+       android:icon="@drawable/ic_trophy"
+        android:title="game" />
+    <item
+        android:id="@+id/navigation_chat"
+        android:icon="@drawable/ic_chat"
+        android:title="chat" />
+    <!--android:icon="@drawable/ic_home_black_24dp"-->
 </menu>
